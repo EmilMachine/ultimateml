@@ -1,4 +1,32 @@
 ========
+BASED ON
+========
+
+- https://github.com/ionelmc/cookiecutter-pylibrary
+
+build
+========
+rm -rf build
+rm -rf src/*.egg-info
+
+tox -e check
+
+python setup.py clean --all sdist bdist_wheel
+
+install 
+=========
+locally (when you are in main folder, e means you do not have to rebuild)
+´pip install -e .´
+
+from github 
+´pip install git+https://github.com/EmilMachine/ultimateml.git´
+
+
+
+pip install git+https://github.com/tangentlabs/django-oscar-paypal.git@issue/34/oscar-0.6
+And specify the branch name without the leading /.
+
+========
 Overview
 ========
 
